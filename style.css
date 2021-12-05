@@ -1,0 +1,118 @@
+body {
+   display: block;
+   justify-content: center;
+   align-items: center;
+   min-height: 100vh;
+   background: #091921;
+}
+a {
+   display: block;
+   position: relative;
+   height: 35px;
+   width: 170px;
+   left: 90px;
+   top: 600px;
+   color: #fff;
+   font-size: 26px;
+   text-decoration: none;
+   text-transform: uppercase;
+   box-shadow: -7px -7px 10px rgba(255, 255, 255,.05),
+               7px 7px 10px rgba(0, 0, 0,.3);
+   
+}
+.clock {
+   position: relative; 
+   left: 15px;
+   width: 300px;
+   height: 300px;
+   background: url("Clock.png");
+   border-radius: 50%;
+   background-size: cover;
+   border: 8px solid #091921;
+   box-shadow: 0px -15px 15px rgba(255, 255, 255,.05),
+         inset 0px -15px 15px rgba(255, 255, 255,.05),
+               0px 15px 15px rgba(0, 0, 0,.3),
+         inset 0px 15px 15px rgba(0, 0, 0,.3);
+ 
+}
+.clock .dot {
+   position: absolute;
+   width: 7px;
+   height: 7px;
+   border-radius: 50%;
+   top:139px;
+   left: 143px;   
+   border: 3px solid #091921;
+   background: #F1F1F4;
+   z-index: 3;
+   
+}
+.clock .hr {
+   position: absolute;
+   width: 65px;
+   height: 6px;
+   top:141px;
+   left: 150px;
+   border-radius: 50px;
+   background: #F91313;
+   animation: hr calc(48 * 3600s) steps(120) infinite;
+   z-index: 0;
+}
+.clock .min {
+   position: absolute;
+   width: 80px;
+   height: 4px;
+   top:143px;
+   left: 150px;
+   border-radius: 50px;
+   background: #3FEEE6;
+   animation: min calc(2 * 3600s) steps(120) infinite;
+   z-index: 1;
+}
+.clock .sec {
+   position: absolute;
+   width: 120px;
+   height: 3px;
+   top: 144px;
+   left: 127px;
+   border-radius: 50px;
+   background: #97EACF;
+   animation: sec 120s steps(120) infinite;
+   z-index: 2;
+}
+@keyframes hr {
+   0% 
+   {
+      transform-origin: left;
+      transform: rotate(-90deg);
+   }
+   100% 
+   { 
+      transform-origin: left;
+      transform: rotate(630deg);
+   }
+}
+@keyframes min {
+   0% 
+   {
+      transform-origin: left;
+      transform: rotate(-90deg);
+   }
+   100% 
+   { 
+      transform-origin: left;
+      transform: rotate(630deg);
+   }
+}
+@keyframes sec {
+   0% 
+   {
+      transform-origin: 19% 20%;
+      transform: rotate(-89deg);
+   }
+   100% 
+   { 
+      transform-origin: 19% 20%;
+      transform: rotate(630deg);
+   }
+}
